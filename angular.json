@@ -38,6 +38,7 @@
             ],
             "styles": [
               "src/styles.scss"
+             
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -109,5 +110,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "149a77fe-400a-40e3-ae53-ba1caf6c8ff4"
   }
 }

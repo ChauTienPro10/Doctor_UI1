@@ -1,0 +1,29 @@
+
+<div class="body">
+
+
+<div class="container">
+	<table>
+		<thead>
+			<tr>
+				<th>Cucstomer</th>
+				<th>Mail of customer</th>
+				<th>Date</th>
+				<th>Meet time</th>
+				<th><button class="button-37" role="button" (click)="handleAcceptAll()">Accept</button></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let confirm of ListConfirm">
+				<td>{{confirm.nameother}}</td>
+				<td>{{confirm.mailcustomer}}</td>
+				<td>{{confirm.timeof}}</td>
+				<td>{{confirm.meettime}}</td>
+				<td><input type="checkbox" [(ngModel)]="confirm.checked" name="accept" id="accept-checkbox"></td>
+			</tr>
+			
+		</tbody>
+	</table>
+</div>
+
+</div>

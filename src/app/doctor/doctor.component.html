@@ -1,0 +1,33 @@
+<div class="container-tien">
+    <div id="background">
+        <div id="circle">
+          <div id="circle-glow"></div>
+          <div id="circle-inner"></div>
+        </div>
+      </div>
+  
+  <div id="app">
+   
+    
+    <div id="profiles">
+      <div class="profile" *ngFor="let doctor of doctors">
+        <div class="profile-content">
+          <div class="profile-pic">
+            <img class="profile-pic-image" src="../../assets/images/dr.jpg" />
+          </div>
+          <div class="btn">
+            <h3 style="color: white;" class="profile-name">{{doctor.name}}</h3>
+            <button class="button-29" role="button" (click)="booking(doctor.doctorid)">Set an appoinment</button>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  
+
+
+
+</div>

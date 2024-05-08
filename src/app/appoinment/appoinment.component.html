@@ -1,0 +1,54 @@
+<div class="body">
+    <button class="button-91" role="button" *ngIf="sharedDataService.user!==undefined && sharedDataService.user.role[0].authority==='ROLE_DOCTOR'"
+    (click)="goToConfirm()">Waiting Appoinment</button>
+    <section>
+        <!--for demo wrap-->
+        <h1 style="padding-top: 50px;">Your Appoinments</h1>
+        <div class="tbl-header">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <thead>
+              <tr>
+                <th>Doctor</th>
+                <th>Patient</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th></th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="tbl-content">
+          <table cellpadding="0" cellspacing="0" border="0">
+            <tbody>
+              <tr *ngFor="let appoinment of appoinments">
+                <td>{{appoinment.namedoctor}}</td>
+                <td>{{appoinment.namecustomer}} </td>
+                <td>{{appoinment.timeof}}</td>
+                <td>{{appoinment.meettime}}</td>
+                <td><button (click)="cancel(appoinment.id)" class="button-12" role="button">Cancel</button></td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </div>
+      </section>
+      
+      
+      <!-- follow me template -->
+      <div class="made-with-love">
+        Made by
+        <i>♥</i> by
+        <a target="_blank" href="https://github.com/chauduong22012003">Chau Duong Phat Tien</a>
+      </div>
+</div>
+
+
+
+
+
+<script>
+    $(window).on("load resize ", function() {
+  var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+  $('.tbl-header').css({'padding-right':scrollWidth});
+}).resize();
+</script>
